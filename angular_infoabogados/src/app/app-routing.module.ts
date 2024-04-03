@@ -31,7 +31,7 @@ const routes: Routes = [
   {path:"editarcitas/:id_cita",component:EditarcitasComponent},
   {path:"editarusuario/:id_usuario",component:EditarusuarioComponent},
   {path:"citas/:id_cita",component:CitasComponent},
-  {path:"agregarcitas/:idusuario",component:AgregarcitasComponent},
+  {path:"agregarcitas",component:AgregarcitasComponent},
   {path:"citasagendadas/:idusuario",component:CitasagendadasComponent},
   {path:"",pathMatch:"full",redirectTo:"/menu"},
   {path:"**",pathMatch:"full",redirectTo:"/menu"},

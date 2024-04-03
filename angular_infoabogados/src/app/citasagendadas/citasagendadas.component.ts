@@ -26,7 +26,7 @@ export class CitasagendadasComponent implements OnInit {
     this.idusuario=this.route.snapshot.params['idusuario'];
 
     this.citas=this.UsuarioService.citasagendadas(this.idusuario)
-    console.log(this.idusuario)
+    console.log(this.citas)
   }
 
 }

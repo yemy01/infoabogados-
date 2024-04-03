@@ -21,7 +21,8 @@ export class reservacionesModel {
     public desc_caso: string,
     public fecha: string,
     public hora: string,
-    public Profesional: string
+    public Profesional: string,
+    public idcliente:string
   ) { }
 }
 export class citasModel{

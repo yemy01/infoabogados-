@@ -42,10 +42,10 @@ app.get('/', (req, res) => {
 //reservaciones/*
 app.post('/reservaciones', (req, res) => {
     let { 
-        nombre_usuario,desc_caso,fecha,hora,Profesional
+        nombre_usuario,desc_caso,fecha,hora,Profesional,idcliente
     } = req.body
 
-    const query = `INSERT INTO reservaciones VALUES (NULL,'${nombre_usuario}','${desc_caso}','${fecha}','${hora}','${Profesional}')`
+    const query = `INSERT INTO reservaciones VALUES (NULL,'${nombre_usuario}','${desc_caso}','${fecha}','${hora}','${Profesional}',${idcliente})`
     conexion.query(query, (error) => {
         if(error) return console.error(error.message);
         
@@ -409,13 +409,49 @@ app.put('/citas_editar/:id_cita', (req, res) => {
 })
 app.post('/agregarcitas', (req, res) => {
     let { 
-        id_cita,idusuario,tipo_abogado,fecha,hora,respuesta,idreserva
+        id_cita,idusuario,tipo_abogado,fecha,hora,respuesta,
     } = req.body
 
-    const query = `INSERT INTO citas VALUES( ${id_cita},${idusuario},'${tipo_abogado}','${fecha}','${hora}','${respuesta}',${idreserva})`
+    const query = `INSERT INTO citas VALUES (${id_cita},${idusuario},'${tipo_abogado}','${fecha}','${hora}','${respuesta}',NULL)`
     conexion.query(query, (error) => {
         if(error) return console.error(error.message)
 
         res.json('cita registrado con exito')
     })
+})
+//citas usuarios
+app.post('/login_id_usuario', (req,res) => {
+    let  { 
+            email,contrasena
+        } = req.body
+    
+    const  query = `SELECT id_usuario FROM login WHERE email='${email}' AND contrasena='${contrasena}';`
+        
+    conexion.query(query, (error,resultado) => {
+            if(error) return console.error(error.message)
+    
+            if(resultado.length > 0) {
+                res.json(resultado)
+            } else {
+                res.json('Correo o contraseña invalidas')
+            }
+            console.log(resultado)
+        })
+  })
+ 
+  app.get('/citas_i/:idcliente', (req, res) => {
+    const {idcliente} = req.params
+   
+
+    const query = `SELECT citas.id_cita,citas.idusuario,citas.tipo_abogado,citas.fecha,citas.hora,citas.respuesta,citas.idreserva FROM citas inner join reservaciones WHERE idcliente=${idcliente} AND respuesta='asignada'; `
+    conexion.query(query, (error, resultado) => {
+        
+        if(error) return console.error(error.message)
+
+        if(resultado.length > 0) {
+            res.json(resultado)
+        } else {
+            res.json(``)
+        }
+})
 })

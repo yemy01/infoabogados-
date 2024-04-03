@@ -12,10 +12,11 @@ export class ReservacionesComponent implements OnInit {
   seleccionarHora() {
   throw new Error('Method not implemented.');
   }
-  usuario=new reservacionesModel("","","","","","");
+  usuario=new reservacionesModel("","","","","","","");
   horasDisponibles: string[] = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00','14:00'];
   cita= new citasModel("","","","","","","");
   idusuario:any;
+  
  
 
   constructor (
@@ -31,6 +32,7 @@ export class ReservacionesComponent implements OnInit {
   onSubmit(){
     this.usuarioService.corroborardispcita(this.usuario).subscribe(data =>{
     if (data == 'cita disponible'){
+      this.usuario.idcliente=this.idusuario
       this.usuarioService.agregarreservaciones(this.usuario).subscribe(data2=>{
         this.usuarioService.obtenerreserid(this.usuario).subscribe(data3 =>{
           let res: any = data3[0] 

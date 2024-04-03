@@ -86,8 +86,8 @@ export class UsuarioService {
   loginid(id_usuario:UsuarioModel){
     return this.http.post<UsuarioModel[]>(`${this.BASE_URL}/login_id_usuario`,id_usuario);
   }
-  citasagendadas(idusuario:string){
-    return this.http.get<citasModel[]>(`${this.BASE_URL}/citas_/${idusuario}`);
+  citasagendadas(idcliente:string){
+    return this.http.get<citasModel[]>(`${this.BASE_URL}/citas_i/${idcliente}`);
 
   }
 
