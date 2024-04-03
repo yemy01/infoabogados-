@@ -7,7 +7,7 @@ import { UsuarioModel,citasModel,reservacionesModel } from './usuario.model';
 })
 export class UsuarioService {
 
-  BASE_URL ="http://localhost:9300"
+  BASE_URL ="https://infoabogados.onrender.com"
   horasDisponibles: any;
 
   constructor(private http: HttpClient) { }
