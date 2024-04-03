@@ -1,0 +1,80 @@
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: #6c4c38; /* Marrón oscuro */
+  border-bottom: 1px solid #4d3527; /* Marrón más oscuro */
+}
+
+.navbar-brand {
+  font-size: 24px; /* Tamaño del texto del logotipo */
+  font-weight: bold; /* Peso de la fuente */
+  color: #fff; /* Color del texto */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #fff; /* Color del texto */
+  font-size: 18px; /* Tamaño del texto */
+  font-weight: bold; /* Peso de la fuente */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #bfa58a; /* Marrón claro */
+}
+
+/* Estilos para el botón del toggler en pantallas pequeñas */
+.navbar-toggler {
+  border: none; /* Quita el borde */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Color del icono del toggler */
+}
+
+/* Estilos para el carrusel */
+.carousel-caption {
+  bottom: 0; /* Posición del texto */
+}
+
+.carousel-caption h4,
+.carousel-caption h3,
+.carousel-caption a.btn {
+  color: #fff; /* Color del texto */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto; /* Ajuste automático del ancho */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #6c4c38; /* Marrón oscuro */
+}
+
+/* Estilos para los botones */
+.btn-primary {
+  background-color: #6c4c38; /* Marrón oscuro */
+  border-color: #6c4c38; /* Marrón oscuro */
+  color: #fff; /* Color del texto */
+}
+
+.btn-primary:hover {
+  background-color: #4d3527; /* Marrón más oscuro */
+  border-color: #4d3527; /* Marrón más oscuro */
+  color: #fff; /* Color del texto */
+}
+
+/* Estilos para el footer */
+.footer {
+  background-color: #4d3527; /* Marrón oscuro */
+  color: #fff; /* Color del texto */
+  padding: 50px 0; /* Relleno superior e inferior */
+  text-align: center; /* Alineación del texto */
+}
+
+.footer a {
+  color: #fff; /* Color del enlace */
+}
+
+.footer a:hover {
+  color: #bfa58a; /* Marrón claro */
+}
