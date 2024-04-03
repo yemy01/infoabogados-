@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="detallesreservaciones.component.css">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <div class="containes">
+            <div alig="center">
+         <body>
+          
+         </body>   
+              <h1>detalles de la citas</h1>
+              <table class="table table-reponsive">
+                <thead class="thead -dark  letapequena">
+                    <th>id reservaciones</th>
+                    <th>nombre usuario</th>
+                    <th>descripción del caso</th>
+                    <th>fecha</th>
+                    <th>hora</th>
+
+             </thead>
+            <tbody>
+                <tr *ngFor="let res of reservaciones| async">
+                  <td>{{ res.id_reserva }}</td>
+                  <td>{{ res.nombre_usuario }}</td>
+                  <td> {{ res.desc_caso }}</td>
+                  <td> {{ res.fecha  | date:"yyyy/MM/dd" }}</td>
+                  <td> {{ res.hora }}</td>
+
+                   <!-- <td><a [routerLink]="['../../detallescitas/:rol']"><button>volver</button></a></td> -->
+                
+                </tr>
+                <!-- <td><a [routerLink]="['../detallescitas/',res.id_reserva]"><button>volver</button></a></td> -->
+                
+                
+            </tbody>
+          </table>
+
+    </div>
+  </div>
+  

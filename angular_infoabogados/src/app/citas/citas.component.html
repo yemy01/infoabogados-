@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="citas.component.css">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+      <div class="containes">
+          <div alig="center">
+
+            <h1>citas</h1>
+            <table class="table table-reponsive">
+              <thead class="thead -dark  letapequena">
+                 <th>idusuario</th>
+                  <th>idreserva</th>
+                  <th>tipo_abogado</th>
+                  <th>fecha</th>
+                  <th>hora</th>
+                  <th>respuesta</th>
+
+                </thead>
+                <tbody>
+              <tr *ngFor="let cita of citas  | async">
+                <td>{{ cita.idusuario}}</td>
+                <td> {{ cita.idreserva }}</td>
+                <td> {{ cita.tipo_abogado}}</td>
+                <td> {{ cita.fecha | date:"yyyy/MM/dd" }}</td>
+                <td> {{ cita.hora }}</td>
+                <td> {{ cita.respuesta }}</td>
+                <td><a [routerLink]="['../../editarcitas/',cita.id_cita]"><button>editar</button></a></td>
+                <!-- <td><a class="btn btn-danger" (click)="borrarUsuario(cit.id_usuario)"><button>Borrar</button></a></td> -->
+             </tr>
+          </tbody>
+        </table>
+        <a [routerLink]="['../../vistaadprincipal/']"><button>Volver</button></a>
+        <a [routerLink]="['../../agregarcitas/:idusuario']"><button>agregar cita</button></a>
+
+  </div>
+</div>
+
+

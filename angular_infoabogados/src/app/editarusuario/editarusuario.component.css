@@ -1,0 +1,30 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5EDE3; /* Color de fondo café claro para el body */
+  }
+
+  .container {
+    margin-top: 50px; /* Margen superior para el contenedor */
+  }
+
+  .form-label {
+    color: #6D4C41; /* Color de texto café oscuro para las etiquetas */
+  }
+
+  .form-control {
+    background-color: #D7CCC8; /* Color de fondo café claro para los input */
+    color: #6D4C41; /* Color de texto café oscuro para los input */
+    border: 1px solid #A69B97; /* Borde café para los input */
+  }
+
+  .form-select {
+    background-color: #D7CCC8; /* Color de fondo café claro para los select */
+    color: #6D4C41; /* Color de texto café oscuro para los select */
+    border: 1px solid #A69B97; /* Borde café para los select */
+  }
+
+  .btn-success {
+    background-color: #6D4C41; /* Color de fondo café oscuro para el botón success */
+    border-color: #6D4C41; /* Color de borde café oscuro para el botón success */
+    color: #FFFFFF; /* Color de texto blanco para el botón success */
+  }

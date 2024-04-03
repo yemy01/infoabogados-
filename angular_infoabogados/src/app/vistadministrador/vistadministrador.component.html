@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="vistadministrador.component.css">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <div class="containes">
+            <div alig="center">
+            
+              <h1>administrador</h1>
+              <table class="table table-reponsive">
+                <thead class="thead -dark  letapequena">
+                   <th>tipo_documento</th>
+                   <th>id_usuario</th>
+                    <th>nombre</th>
+                    <th>apellido</th>
+                    <th>ciudad</th>
+                    <th>Email</th>
+                    <th>rol</th>
+                    
+
+                  </thead>
+               <tbody>
+                <tr *ngFor="let adm of usuarios  | async">
+                  <td>{{ adm.tipo_documento }}</td>
+                  <td>{{ adm.id_usuario}}</td>
+                  <td> {{ adm.nombre }}</td>
+                  <td> {{ adm.apellido}}</td>
+                  <td> {{ adm.ciudad }}</td>
+                  <td> {{ adm.email }}</td>
+                  <td> {{ adm.rol }}</td>
+                  
+                  <td><a [routerLink]="['../../editarusuario/',adm.id_usuario]"><button>editar</button></a></td>
+                  <td><a class="btn btn-danger" (click)="borrarUsuario(adm.id_usuario)"><button>Borrar</button></a></td>
+                  
+                </tr>
+               
+                
+            </tbody>
+            
+          </table>          
+
+    </div>
+    <td><a [routerLink]="['../../vistaadprincipal']"><button>Volver</button></a></td>
+  </div>
+ 
+ 

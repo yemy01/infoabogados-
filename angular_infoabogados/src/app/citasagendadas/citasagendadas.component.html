@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="citasagendadas.component.css">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <div class="containes">
+            <div alig="center">
+            
+              <h1>agenda de citas</h1>
+              <table class="table table-reponsive">
+                <thead class="thead -dark  letapequena">
+                    <th>id cita</th>
+                    <th>id usuario</th>
+                    <th>id reservaciones</th>
+                    <th>tipo de abogado</th>
+                    <th>fecha</th>
+                    <th>hora</th>
+                    <th>respuesta</th>
+                    <th>opciones</th>
+
+                  </thead>
+                  <tbody>
+                <tr *ngFor="let cit of citas | async">
+                  <td>{{ cit.id_cita }}</td>
+                  <td>{{ cit.idusuario }}</td>
+                  <td>{{ cit.idreserva}}</td>
+                  <td> {{ cit.tipo_abogado }}</td>
+                  <td> {{ cit.fecha  | date:"yyyy/MM/dd" }}</td>
+                  <td> {{ cit.hora }}</td>
+                  <td> {{ cit.respuesta }}</td>
+                </tr>
+            </tbody>
+          </table>
+
+    </div>
+  </div>
+

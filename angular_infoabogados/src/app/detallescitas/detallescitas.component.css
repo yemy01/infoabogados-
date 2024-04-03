@@ -1,0 +1,50 @@
+/* Detallescitas.component.css */
+body {
+  background-color: #f4f4f4; /* Un fondo suave para que resalten los elementos */
+}
+
+.card {
+  background-color: #d7ccc8; /* Un tono café claro para el fondo de la tarjeta */
+  border: 1px solid #a69b97; /* Borde un poco más oscuro para definición */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+}
+
+.card h1 {
+  color: #6d4c41; /* Color café oscuro para el texto del título */
+}
+
+.table {
+  border-collapse: collapse; /* Colapsar bordes de la tabla */
+}
+
+.table thead {
+  background-color: #a1887f; /* Fondo café para la cabecera de la tabla */
+  color: #ffffff; /* Texto blanco para contraste */
+}
+
+.table td, .table th {
+  border: 1px solid #a69b97; /* Borde para las celdas */
+  padding: 8px; /* Espaciado interno en celdas */
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #d7ccc8; /* Fondo alterno para las filas */
+}
+
+.btn {
+  background-color: #8d6e63; /* Color café para botones */
+  color: #ffffff; /* Texto blanco para los botones */
+  border: none; /* Sin bordes para los botones */
+  padding: 10px; /* Espaciado interno para los botones */
+  margin: 2px; /* Margen alrededor de los botones */
+  cursor: pointer; /* Cursor de mano al pasar sobre los botones */
+}
+
+.btn:hover {
+  background-color: #6d4c41; /* Color café más oscuro al pasar el cursor sobre los botones */
+}
+
+/* Estilo adicional para resaltar la interactividad */
+.btn-danger:hover {
+  background-color: #5d4037; /* Café más oscuro para el hover en botones de acción */
+}

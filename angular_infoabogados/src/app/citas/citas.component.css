@@ -1,0 +1,59 @@
+/* Estilo general del componente */
+.card {
+    background-color: #f0e6d2; /* Un tono beige suave */
+    color: #5a3e36; /* Color de texto café oscuro */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: auto; /* Centrar la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #7d5e3c; /* Un tono café más intenso para el título */
+    text-align: center; /* Centrar el título */
+  }
+  
+  /* Estilos para la tabla */
+  .table {
+    width: 100%; /* Asegura que la tabla use todo el ancho disponible */
+    margin-top: 20px; /* Espacio antes de la tabla */
+  }
+  
+  .table .thead-dark {
+    background-color: #8b6f47; /* Fondo de los encabezados de la tabla */
+    color: white; /* Texto blanco para los encabezados */
+  }
+  
+  .table td, .table th {
+    padding: 8px; /* Espaciado dentro de cada celda */
+    border: 1px solid #dec9b0; /* Borde suave para las celdas */
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f8f2e9; /* Alternar colores de fondo para las filas */
+  }
+  
+  /* Estilos para los botones */
+  button {
+    background-color: #a2836e; /* Fondo café para los botones */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+    margin-right: 8px; /* Margen a la derecha del botón */
+  }
+  
+  button:hover {
+    background-color: #8b6f47; /* Color al pasar el mouse */
+  }
+  
+  /* Estilo para links simulando botones, en caso de que uses <a> como botones */
+  a button {
+    text-decoration: none; /* Remueve subrayado de los links */
+    display: inline-block; /* Permite aplicar padding y margin */
+  }
+  
+  

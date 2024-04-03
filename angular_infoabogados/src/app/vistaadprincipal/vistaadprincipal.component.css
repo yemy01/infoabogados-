@@ -1,0 +1,41 @@
+.cards-container {
+    display: flex;
+    justify-content: space-around; /* Ajusta este valor según prefieras */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en la siguiente línea si no hay espacio suficiente */
+  }
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan si no hay espacio suficiente */
+    padding: 20px; /* Espacio alrededor del contenedor de tarjetas */
+  }
+  
+  .card {
+    background-color: #f4f0ec; /* Un tono café claro para el fondo de la tarjeta */
+    color: #3e2c1a; /* Un tono café oscuro para el texto */
+    border: 1px solid #a68b7b; /* Un borde en tono café */
+    margin: 10px; /* Margen alrededor de las tarjetas para asegurar que no estén muy juntas */
+  }
+  
+  .card img.card-img-top {
+    width: 100%; /* Asegura que la imagen cubra el ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  
+  .card .card-body {
+    padding: 20px; /* Espacio interior para el contenido de la tarjeta */
+  }
+  
+  .card .card-body button {
+    background-color: #8b7355; /* Un tono café para el botón */
+    color: white; /* Texto blanco para contraste */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .card .card-body button:hover {
+    background-color: #a68b7b; /* Un tono ligeramente más claro al pasar el mouse */
+  }
+  

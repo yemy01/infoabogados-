@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+  <!-- Enlaces a Bootstrap y otros estilos -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="inicio.component.css">
+ 
+  <title>UI Login</title>
+</head>
+<body >
+  <div class="container">
+    <div class="login-container">
+        <div class="login" style="max-width: 400px; margin: auto;">
+            <h2 class="mb-4">Iniciar Sesión</h2>
+            <div class="login-items">
+                <form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Email" class="form-control" name="email" [(ngModel)]="usuario.email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Contraseña" class="form-control" name="pass" [(ngModel)]="usuario.contrasena" required>
+                    </div>
+                    <div class="form-group" style="margin-top: 3%;">
+                        <button type="link" value="Registrarse" class="btn btn-success" id="submit-ed"[disabled]="!usuarioForm.form.valid">iniciar sesion</button>
+                        <a [routerLink]="['/menu']" routerLinkActive="buttonactive" class="btn btn-success m-2">Volver al menu</a>
+                      </div>
+                    <div class="form-group">
+                        <input type="link" class="btn btn-secondary btn-block" [routerLink]="['../registro']" value="REGISTRARSE">
+                        
+                    </div>
+                </form>
+            </div>
+         </div> 
+     </div>
+  </div>
+
+  <!-- Enlace al archivo JS de Bootstrap al final del body -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

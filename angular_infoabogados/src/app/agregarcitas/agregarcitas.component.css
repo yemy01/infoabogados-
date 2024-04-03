@@ -1,0 +1,40 @@
+
+  body {
+    background-color: #f4f3ef; /* Fondo general en tono claro */
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto para el texto */
+  }
+
+  .login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 20px; /* Espaciado superior */
+  }
+
+  .form-label {
+    color: #5a3e36; /* Color café para los labels */
+  }
+
+  .form-control {
+    background-color: #e8e0d9; /* Fondo más claro para los inputs */
+    border: 1px solid #d3c1b8; /* Borde de los inputs */
+    color: #5a3e36; /* Texto en color café */
+  }
+
+  .form-select {
+    background-color: #e8e0d9; /* Fondo más claro para el select */
+    border: 1px solid #d3c1b8; /* Borde del select */
+    color: #5a3e36; /* Color del texto */
+  }
+
+  .btn-success {
+    background-color: #8b6f47; /* Botón en tono café */
+    border-color: #8b6f47; /* Borde del botón */
+  }
+
+  .btn-success:hover {
+    background-color: #7d5e3c; /* Botón más oscuro al pasar el mouse */
+    border-color: #7d5e3c;
+  }
+
