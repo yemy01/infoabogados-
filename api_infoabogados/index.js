@@ -19,10 +19,11 @@ const PUERTO = 9300
 
 const conexion = mysql.createConnection(
     {
-        host:'localhost',
-        database:'infoabogadoss',
-        user:'root',
-        password:''
+        host:'bv4dlaafckvcpnpvsxnn-mysql.services.clever-cloud.com',
+        port:3306,
+        database:'bv4dlaafckvcpnpvsxnn',
+        user:'ujon6tni8mjipham',
+        password:'Hs6GlCqYDueGIYih7MPs'
 }
 )
 app.listen(PUERTO, () => {
